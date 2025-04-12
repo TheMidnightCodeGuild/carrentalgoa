@@ -5,20 +5,20 @@ import Image from 'next/image';
 const Cars = () => {
   const carData = [
     {
-      name: "Wagon R Manual",
-      price: "₹1500",
+      name: "Baleno Automatic",
+      price: "₹1600",
       image: "/images/wagonr.png",
       features: ["5 Seater", "AC", "Manual"]
     },
     {
       name: "i10 Manual", 
-      price: "₹1500",
+      price: "1400",
       image: "/images/i10.png",
       features: ["5 Seater", "AC", "Manual"]
     },
     {
       name: "Swift Manual",
-      price: "₹1500", 
+      price: "₹1300", 
       image: "/images/swift.png",
       features: ["5 Seater", "AC", "Manual"]
     }
