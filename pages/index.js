@@ -5,17 +5,18 @@ import Footer from './components/Footer'
 import Cars from './components/Cars'
 import About from './components/About'
 import Choose from './components/Choose'
-const index = () => {
+
+const Index = () => {
   return (
     <div>
       <Navbar />
-      <Landing/>
-      <About/>
-      <Cars/>
-     <Choose/>
-      <Footer/>
+      <Landing />
+      <About />
+      <Cars />
+      <Choose />
+      <Footer />
     </div>
   )
 }
 
-export default index
+export default Index
