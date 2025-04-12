@@ -1,8 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 const Contactus = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      await addDoc(collection(db, "Enquiries"), {
+        ...formData,
+        createdAt: new Date()
+      });
+      setSubmitStatus({ success: true, message: "Message sent successfully!" });
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus({ success: false, message: "Failed to send message. Please try again." });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
     <Navbar/>
@@ -65,7 +104,7 @@ const Contactus = () => {
                       Our Locations
                     </h4>
                     <p className="text-sm sm:text-base text-black">
-                    
+                      <strong>Panaji</strong>, <strong>Calangute</strong>, <strong>Candolim</strong>, <strong>Anjuna</strong>, <strong>Vagator</strong>, <strong>Mapusa</strong>, <strong>Morjim</strong>, <strong>Colva</strong>, <strong>Old Goa</strong>, <strong>Ponda</strong>, <strong>Baga</strong>, <strong>Arambol</strong>, <strong>Thivim</strong>, <strong>Margoa</strong>
                     </p>
                   </div>
                 </div>
@@ -80,7 +119,7 @@ const Contactus = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       className="sm:w-8 sm:h-8"
                     >
-                      <g clip-path="url(#clip0_941_17577)">
+                      <g clipPath="url(#clip0_941_17577)">
                         <path
                           d="M24.3 31.1499C22.95 31.1499 21.4 30.7999 19.7 30.1499C16.3 28.7999 12.55 26.1999 9.19997 22.8499C5.84997 19.4999 3.24997 15.7499 1.89997 12.2999C0.39997 8.59994 0.54997 5.54994 2.29997 3.84994C2.34997 3.79994 2.44997 3.74994 2.49997 3.69994L6.69997 1.19994C7.74997 0.599942 9.09997 0.899942 9.79997 1.89994L12.75 6.29994C13.45 7.34994 13.15 8.74994 12.15 9.44994L10.35 10.6999C11.65 12.7999 15.35 17.9499 21.25 21.6499L22.35 20.0499C23.2 18.8499 24.55 18.4999 25.65 19.2499L30.05 22.1999C31.05 22.8999 31.35 24.2499 30.75 25.2999L28.25 29.4999C28.2 29.5999 28.15 29.6499 28.1 29.6999C27.2 30.6499 25.9 31.1499 24.3 31.1499ZM3.79997 5.54994C2.84997 6.59994 2.89997 8.74994 3.99997 11.4999C5.24997 14.6499 7.64997 18.0999 10.8 21.2499C13.9 24.3499 17.4 26.7499 20.5 27.9999C23.2 29.0999 25.35 29.1499 26.45 28.1999L28.85 24.0999C28.85 24.0499 28.85 24.0499 28.85 23.9999L24.45 21.0499C24.45 21.0499 24.35 21.0999 24.25 21.2499L23.15 22.8499C22.45 23.8499 21.1 24.1499 20.1 23.4999C13.8 19.5999 9.89997 14.1499 8.49997 11.9499C7.84997 10.8999 8.09997 9.54994 9.09997 8.84994L10.9 7.59994V7.54994L7.94997 3.14994C7.94997 3.09994 7.89997 3.09994 7.84997 3.14994L3.79997 5.54994Z"
                           fill="currentColor"
@@ -132,7 +171,7 @@ const Contactus = () => {
                       Email Address
                     </h4>
                     <p className="text-sm sm:text-base text-body-color dark:text-dark-6">
-                      info@goacarrental.com
+                     rajbaratyadav@gmail.com
                     </p>
                   </div>
                 </div>
@@ -140,41 +179,63 @@ const Contactus = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-3xl border-black border-2 bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">
-                <form>
+                {submitStatus && (
+                  <div className={`mb-6 p-4 rounded ${submitStatus.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                    {submitStatus.message}
+                  </div>
+                )}
+                <form onSubmit={handleSubmit}>
                   <div className="mb-6">
                     <input
                       type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       placeholder="Your Name"
                       className="border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none"
+                      required
                     />
                   </div>
                   <div className="mb-6">
                     <input
                       type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="Your Email"
                       className="border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none"
+                      required
                     />
                   </div>
                   <div className="mb-6">
                     <input
                       type="text"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                       placeholder="Your Phone"
                       className="border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none"
+                      required
                     />
                   </div>
                   <div className="mb-6">
                     <textarea
                       rows="6"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       placeholder="Your Message"
                       className="border-[f0f0f0] w-full resize-none rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none"
+                      required
                     ></textarea>
                   </div>
                   <div>
                     <button
                       type="submit"
-                      className="w-full rounded-full border bg-blue-500 p-3 text-white transition hover:bg-opacity-90"
+                      disabled={isSubmitting}
+                      className="w-full rounded-full border bg-blue-500 p-3 text-white transition hover:bg-opacity-90 disabled:bg-blue-300"
                     >
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </button>
                   </div>
                 </form>
