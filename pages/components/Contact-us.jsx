@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { collection, addDoc } from 'firebase/firestore';
-import { db } from '../../firebase/config';
+import { db } from '../../lib/firebase';
 
 const Contactus = () => {
   const [formData, setFormData] = useState({
