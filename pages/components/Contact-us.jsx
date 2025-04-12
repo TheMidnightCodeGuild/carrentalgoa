@@ -103,7 +103,7 @@ const Contactus = () => {
                     <h4 className="mb-1 text-lg sm:text-xl font-bold text-black">
                       Our Locations
                     </h4>
-                    <p className="text-sm sm:text-base text-black">
+                    <p className="text-sm sm:text-base ">
                       <strong>Panaji</strong>, <strong>Calangute</strong>, <strong>Candolim</strong>, <strong>Anjuna</strong>, <strong>Vagator</strong>, <strong>Mapusa</strong>, <strong>Morjim</strong>, <strong>Colva</strong>, <strong>Old Goa</strong>, <strong>Ponda</strong>, <strong>Baga</strong>, <strong>Arambol</strong>, <strong>Thivim</strong>, <strong>Margoa</strong>
                     </p>
                   </div>

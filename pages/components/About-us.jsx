@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { FaCar, FaUserShield, FaPhoneAlt } from 'react-icons/fa';
 import { MdSupportAgent } from 'react-icons/md';
-
+import Link from 'next/link';
 const Aboutus = () => {
   const features = [
     {
@@ -34,7 +34,7 @@ const Aboutus = () => {
         <meta property="og:title" content="About Us - Premier Car Rental Service in Goa" />
         <meta property="og:description" content="Your trusted car rental partner in Goa offering well-maintained vehicles, competitive rates and 24/7 support." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://yourwebsite.com/about-us" />
+        <link rel="canonical" href="https://bestcarrentalgoa.com/about-us" />
       </Head>
 
       <Navbar/>
@@ -70,16 +70,16 @@ const Aboutus = () => {
         <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="relative h-[350px] sm:h-[450px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+              <div className="relative h-[350px] sm:h-[450px] lg:h-[550px] rounded-2xl overflow-hidden ">
                 <Image
-                  src="/images/about-us.jpg"
+                  src="/images/about2.png"
                   alt="Professional car rental service in Goa showing a fleet of well-maintained vehicles"
                   fill
                   className="object-cover"
                   priority
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                  <p className="text-white text-lg font-medium">Serving Goa since 2010</p>
+                  <p className="text-white text-lg font-medium">Serving Goa since many years</p>
                 </div>
               </div>
               
@@ -103,11 +103,17 @@ const Aboutus = () => {
                   </p>
                 </div>
                 
-                <div className="pt-6">
-                  <button className="bg-yellow-500 text-white px-8 sm:px-10 py-4 rounded-full hover:bg-yellow-600 transition-all duration-300 font-semibold text-sm sm:text-base shadow-xl hover:shadow-yellow-300/30 flex items-center gap-2 transform hover:-translate-y-1" aria-label="Contact our car rental service">
-                    <FaPhoneAlt className="w-4 h-4" />
-                    Contact Us
-                  </button>
+                <div className=" flex">
+                  <Link 
+                    href="/components/Contact-us" 
+                    className="bg-yellow-500 text-white px-8 sm:px-10 py-4 rounded-full hover:bg-yellow-600 transition-all duration-300 font-semibold text-sm sm:text-base shadow-xl hover:shadow-yellow-300/30 flex items-center gap-3 transform hover:-translate-y-1 relative overflow-hidden group" 
+                    aria-label="Contact our car rental service"
+                  >
+                    <span className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <FaPhoneAlt className="w-4 h-4 relative z-10" />
+                    <span className="relative z-10">Contact Us</span>
+                    <span className="absolute right-0 top-0 h-full w-12 bg-yellow-600 opacity-0 group-hover:opacity-20 transform translate-x-full group-hover:translate-x-0 transition-all duration-300"></span>
+                  </Link>
                 </div>
               </div>
             </div>

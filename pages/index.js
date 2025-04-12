@@ -5,11 +5,14 @@ import Footer from './components/Footer'
 import Cars from './components/Cars'
 import About from './components/About'
 import Choose from './components/Choose'
+import Loader from './components/Loader'
 
 const Index = () => {
   return (
     <div>
+      <Loader/>
       <Navbar />
+
       <Landing />
       <About />
       <Cars />

@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50">
-      <div className="bg-[#FFBF00] py-2 border-b border-white">
+      <div className="bg-[#FFBF00] py-2 border-4 border-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
             <Link href="/" className="flex items-center">
@@ -42,7 +42,7 @@ const Navbar = () => {
                 alt="Car Rental Service"
                 width={130}
                 height={40}
-                className="h-12 w-auto sm:h-16"
+                className="h-12 w-auto sm:h-24"
                 priority
               />
             </Link>
@@ -75,7 +75,7 @@ const Navbar = () => {
 
               <Link
                 href="/components/Contact-us"
-                className="bg-white text-yellow-900 hover:bg-yellow-50 px-4 py-2 rounded-lg text-sm font-semibold transition duration-150 ease-in-out shadow-sm hover:shadow-md"
+                className="bg-white border text-yellow-900 hover:bg-yellow-50 px-4 py-2 rounded-lg text-sm font-semibold transition duration-150 ease-in-out shadow-sm hover:shadow-md"
               >
                 Contact Us
               </Link>
