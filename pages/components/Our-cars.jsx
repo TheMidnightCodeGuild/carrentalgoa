@@ -3,10 +3,10 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import Image from 'next/image';
 import { BsWhatsapp, BsTelephoneFill } from 'react-icons/bs';
-import { FaCarSide, FaStar, FaGasPump } from 'react-icons/fa';
+import { FaGasPump } from 'react-icons/fa';
 import { MdAirlineSeatReclineNormal, MdSpeed } from 'react-icons/md';
 import Head from 'next/head';
-
+import Link from 'next/link'
 const Ourcars = () => {
   const carsList = [
     {
@@ -15,7 +15,7 @@ const Ourcars = () => {
       description: "Luxury and style redefined",
       price: 20000,
       features: ["Automatic", "Premium Interior", "Sunroof"],
-      rating: 4.9
+
     },
     {
       name: "Fortuner (Automatic)",
@@ -23,7 +23,7 @@ const Ourcars = () => {
       description: "Premium SUV experience", 
       price: 8000,
       features: ["7 Seater", "4x4 Available", "Premium Interior"],
-      rating: 4.8
+
     },
     {
       name: "Endeavour (Automatic)", 
@@ -31,7 +31,7 @@ const Ourcars = () => {
       description: "Luxury SUV for ultimate comfort",
       price: 7000,
       features: ["7 Seater", "Premium Interior", "Panoramic Sunroof"],
-      rating: 4.7
+
     },
     {
       name: "Thar (Automatic)",
@@ -39,7 +39,7 @@ const Ourcars = () => {
       description: "Adventure ready off-roader",
       price: 4000,
       features: ["4x4", "Convertible", "Adventure Ready"],
-      rating: 4.9
+
     },
     {
       name: "Thar Hardtop (Automatic)",
@@ -47,7 +47,7 @@ const Ourcars = () => {
       description: "Covered comfort with off-road capability",
       price: 4000,
       features: ["4x4", "Hardtop", "Adventure Ready"],
-      rating: 4.8
+
     },
     {
       name: "Ertiga (Automatic)",
@@ -55,7 +55,7 @@ const Ourcars = () => {
       description: "Spacious family MPV",
       price: 2500,
       features: ["7 Seater", "Spacious", "Family Friendly"],
-      rating: 4.6
+
     },
     {
       name: "Ertiga (Manual)",
@@ -63,23 +63,16 @@ const Ourcars = () => {
       description: "Spacious family MPV",
       price: 2200,
       features: ["7 Seater", "Spacious", "Family Friendly"],
-      rating: 4.5
+  
     },
-    {
-      name: "i20 (Automatic with Sunroof)",
-      image: "/images/i20.png",
-      description: "Premium hatchback with extra features",
-      price: 1700,
-      features: ["Sunroof", "Premium Interior", "Automatic"],
-      rating: 4.7
-    },
+   
     {
       name: "i20 (Manual)",
       image: "/images/i20.png",
       description: "Premium hatchback",
       price: 1400,
       features: ["Spacious", "Fuel Efficient", "Premium Interior"],
-      rating: 4.6
+
     },
     {
       name: "i10 (Automatic)",
@@ -87,7 +80,7 @@ const Ourcars = () => {
       description: "Compact and efficient",
       price: 1500,
       features: ["City Friendly", "Fuel Efficient", "Easy to Drive"],
-      rating: 4.5
+   
     },
     {
       name: "i10 (Manual)",
@@ -95,7 +88,7 @@ const Ourcars = () => {
       description: "Compact and efficient",
       price: 1200,
       features: ["City Friendly", "Fuel Efficient", "Easy to Drive"],
-      rating: 4.4
+
     },
     {
       name: "Baleno (Automatic)",
@@ -103,7 +96,7 @@ const Ourcars = () => {
       description: "Comfortable premium hatchback",
       price: 1600,
       features: ["Spacious", "Premium Interior", "Automatic"],
-      rating: 4.6
+ 
     },
     {
       name: "Baleno (Manual)",
@@ -111,7 +104,7 @@ const Ourcars = () => {
       description: "Comfortable premium hatchback",
       price: 1300,
       features: ["Spacious", "Premium Interior", "Fuel Efficient"],
-      rating: 4.5
+
     },
     {
       name: "Swift (Automatic)",
@@ -119,7 +112,7 @@ const Ourcars = () => {
       description: "Sporty and efficient hatchback",
       price: 1600,
       features: ["Sporty", "Fuel Efficient", "Automatic"],
-      rating: 4.7
+     
     },
     {
       name: "Swift (Manual)",
@@ -127,7 +120,7 @@ const Ourcars = () => {
       description: "Sporty and efficient hatchback",
       price: 1300,
       features: ["Sporty", "Fuel Efficient", "Easy to Drive"],
-      rating: 4.6
+     
     },
   ];
 
@@ -169,34 +162,22 @@ const Ourcars = () => {
 
       <div className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <div className="inline-flex items-center justify-center p-3 bg-yellow-100 rounded-full mb-6">
-              <FaCarSide className="text-yellow-500 text-2xl sm:text-3xl md:text-4xl"/>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Exceptional Vehicles for Every Journey</h2>
-            <div className="h-1 w-24 bg-yellow-500 mx-auto mb-6 rounded-full"></div>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from our wide selection of meticulously maintained vehicles to suit your needs and budget
-            </p>
-          </div>
+       
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
             {carsList.map((car, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100 group">
-                <div className="relative h-56 sm:h-60 md:h-64 overflow-hidden">
+              <div key={index} className="overflow-hidden  border border-yellow-600 ">
+                <div className="relative h-56 sm:h-60 md:h-48 overflow-hidden">
                   <Image
                     src={car.image}
                     alt={car.name}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-contain"
                   />
                   <div className="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1.5 rounded-full text-sm font-bold shadow-lg">
                     ₹{car.price}/day
                   </div>
-                  <div className="absolute bottom-4 left-4 flex items-center bg-black/70 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                    <FaStar className="text-yellow-400 mr-1" />
-                    <span className="text-white font-medium text-sm">{car.rating}</span>
-                  </div>
+                 
                 </div>
                 <div className="p-6 sm:p-7">
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{car.name}</h3>
@@ -215,15 +196,15 @@ const Ourcars = () => {
                   
                   <div className="flex justify-between items-center">
                     <div className="flex gap-2">
-                      <a 
+                      <Link 
                         href="tel:+919876543210" 
                         className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-blue-300/30 transform hover:-translate-y-1"
                         title="Call us"
                         aria-label="Call to book this car"
                       >
                         <BsTelephoneFill size={18} />
-                      </a>
-                      <a 
+                      </Link>
+                      <Link 
                         href="https://wa.me/919876543210" 
                         target="_blank" 
                         rel="noopener noreferrer" 
@@ -232,7 +213,7 @@ const Ourcars = () => {
                         aria-label="WhatsApp to book this car"
                       >
                         <BsWhatsapp size={18} />
-                      </a>
+                      </Link>
                     </div>
                     <button 
                       className="bg-yellow-500 text-white px-6 py-3 rounded-full hover:bg-yellow-600 transition-all duration-300 font-semibold shadow-xl hover:shadow-yellow-300/30 transform hover:-translate-y-1 flex items-center"

@@ -18,7 +18,7 @@ const Cars = () => {
     },
     {
       name: "Swift Manual",
-      price: "₹1300", 
+      price: "₹130", 
       image: "/images/swift.png",
       features: ["5 Seater", "AC", "Manual"]
     }
@@ -27,7 +27,7 @@ const Cars = () => {
   return (
     <>
 
-      <div className="bg-gray-50">
+      <div className="bg-gray-500">
         <div className="lg:max-w-[1300px] mx-auto px-4 py-20">
           <div className="text-left mb-10">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Premium Fleet</h2>
