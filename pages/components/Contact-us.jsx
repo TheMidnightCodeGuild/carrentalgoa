@@ -62,10 +62,10 @@ const Contactus = () => {
                   </div>
                   <div className="w-full">
                     <h4 className="mb-1 text-lg sm:text-xl font-bold text-black">
-                      Our Location
+                      Our Locations
                     </h4>
                     <p className="text-sm sm:text-base text-black">
-                    2nd floor, Dindayal Complex, B-205 & 206, Nanakheda, Ujjain, Madhya Pradesh 456010
+                    
                     </p>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ const Contactus = () => {
                       Phone Number
                     </h4>
                     <p className="text-sm sm:text-base text-body-color dark:text-dark-6">
-                      (+91) 9098645524
+                      (+91) 9682933407
                     </p>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ const Contactus = () => {
                       Email Address
                     </h4>
                     <p className="text-sm sm:text-base text-body-color dark:text-dark-6">
-                      info@claimantmitra.com
+                      info@goacarrental.com
                     </p>
                   </div>
                 </div>
