@@ -31,16 +31,16 @@ const Loader = () => {
 
   return (
     <div className="fixed inset-0 bg-[#fafafb] z-[9999] flex items-center justify-center loading">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center px-4">
         <video
           autoPlay
           muted
           playsInline
-          className="w-[200px] h-[200px] object-cover"
+          className="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] object-cover"
         >
           <source src="/images/loader.mp4" type="video/mp4" />
         </video>
-        <p className="text-xl font-semibold ">Loading...</p>
+        <p className="text-lg sm:text-xl font-semibold">Loading...</p>
       </div>
     </div>
   );
