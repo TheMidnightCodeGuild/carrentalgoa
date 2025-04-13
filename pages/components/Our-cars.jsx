@@ -164,7 +164,7 @@ const Ourcars = () => {
       <div
         className="bg-cover min-h-[300px] lg:min-h-[550px] mt-10 lg:mt-0 flex items-center bg-center object-cover justify-center bg-black flex-col relative w-full"
         style={{
-          backgroundImage: "url('/images/contactbanner.png')",
+          backgroundImage: "url('/images/landingbg.png')",
           objectFit: "cover",
         }}
       >
@@ -279,12 +279,12 @@ const Ourcars = () => {
                           <BsWhatsapp size={18} />
                         </Link>
                       </div>
-                      <button
-                        className="bg-yellow-500 text-white px-6 py-3 rounded-full hover:bg-yellow-600 transition-all duration-300 font-semibold shadow-xl hover:shadow-yellow-300/30 transform hover:-translate-y-1 flex items-center"
-                        aria-label="Book this car now"
+                      <div
+                        className="bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold shadow-xl"
+                        aria-label="Price per day"
                       >
-                        Book Now
-                      </button>
+                        ₹{carPrices[car.priceKey]}/day
+                      </div>
                     </div>
                   </div>
                 </div>

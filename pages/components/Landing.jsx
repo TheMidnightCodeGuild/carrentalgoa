@@ -11,8 +11,8 @@ const Landing = () => {
           <Image
             src="/images/landingbg.png"
             alt="Goa Beach Road"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
             priority
           />
           <div className="absolute inset-0 bg-black/40" />

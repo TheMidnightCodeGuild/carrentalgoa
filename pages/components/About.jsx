@@ -4,7 +4,7 @@ import Link from 'next/link';
 const About = () => {
   return (
     <div className="bg-yellow-50 border-4 border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
+      <div className="lg:max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
           {/* Content Section */}
@@ -30,7 +30,7 @@ const About = () => {
           </div>
 
           {/* Image Section */}
-          <div className="order-1 lg:order-2 relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] rounded-xl overflow-hidden">
+          <div className="order-1 lg:order-2 relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] rounded-xl overflow-hidden ">
             <Image
               src="/images/about.png"
               alt="Car Rental Service"
@@ -38,7 +38,7 @@ const About = () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
               quality={100}
               priority
-              className="rounded-xl object-cover"
+              className="rounded-xl object-contain mt-5"
             />
           </div>
 

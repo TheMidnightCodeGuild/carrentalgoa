@@ -16,6 +16,7 @@ const Footer = () => {
                 alt="Company Logo"
                 width={130}
                 height={45}
+                style={{ width: "auto", height: "auto" }}
                 className="mb-4 hover:opacity-90 transition-opacity"
               />
             </Link>
@@ -63,7 +64,7 @@ const Footer = () => {
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <span>+91 1234567890</span>
+                <span>+91-9682933407</span>
               </li>
               <li className="flex items-center gap-2">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -89,7 +90,7 @@ const Footer = () => {
               © {new Date().getFullYear()} Car Rental Services. All rights reserved.
             </p>
             <p className="font-medium">
-              Designed and Developed By <a href="https://noxalgo.com" target="_blank" rel="noopener noreferrer" className="text-yellow-900 hover:text-yellow-800 transition-colors">Noxalgo LLP</a>
+              Designed and Developed By <Link href="https://noxalgo.com" target="_blank" rel="noopener noreferrer" className="text-yellow-900 hover:text-yellow-800 transition-colors">Noxalgo LLP</Link>
             </p>
           </div>
         </div>

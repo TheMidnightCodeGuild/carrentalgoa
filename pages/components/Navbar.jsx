@@ -72,6 +72,14 @@ const Navbar = () => {
                 Our Cars
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
               </Link>
+              <Link
+                href="/components/Blogs"
+                className="text-yellow-900 hover:text-white px-3 py-2 text-sm font-semibold relative group"
+              >
+                Blogs
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+              </Link>
+
 
               <Link
                 href="/components/Contact-us"
