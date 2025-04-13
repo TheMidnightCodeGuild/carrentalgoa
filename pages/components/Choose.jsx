@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Choose = () => {
   return (
-    <div className="bg-yellow-50 border-2 py-8 sm:py-16 rounded-2xl sm:rounded-full">
+    <div className="bg-yellow-50 border-2 py-8 sm:py-16 rounded-2xl sm:rounded-full m-2 sm:m-10">
       <div className="lg:max-w-[1200px] mx-auto px-4 mb-10">
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-10">

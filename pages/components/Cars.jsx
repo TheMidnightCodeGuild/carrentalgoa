@@ -5,6 +5,7 @@ import { BsWhatsapp, BsTelephoneFill } from 'react-icons/bs';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { db } from "@/lib/firebase";
 import { doc, getDoc } from "firebase/firestore";
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 import '@splidejs/react-splide/css';
 
@@ -160,10 +161,19 @@ const Cars = () => {
           ) : (
             <Splide
               options={{
+                type: 'loop',
+                autoplay: true,
+                interval: 10000,
+                pauseOnHover: true,
+                resetProgress: false,
                 perPage: 3,
                 gap: '1rem',
                 arrows: false,
                 pagination: false,
+                autoScroll: {
+                  speed: 1,
+                  pauseOnHover: true,
+                },
                 breakpoints: {
                   480: {
                     perPage: 1,
@@ -183,6 +193,7 @@ const Cars = () => {
                   },
                 }
               }}
+              extensions={{ AutoScroll }}
               className="mb-8"
             >
               {carData.map((car, index) => (
