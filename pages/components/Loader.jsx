@@ -21,6 +21,16 @@ const Loader = () => {
       if (playPromise !== undefined) {
         playPromise.catch(error => {
           console.log("Auto-play was prevented. This is normal on some devices.", error);
+          
+          // Fallback for mobile devices where autoplay fails
+          const fallbackTimer = setTimeout(() => {
+            // Try playing again or proceed with animation
+            videoRef.current?.play().catch(() => {
+              console.log("Second play attempt failed, continuing with loader animation");
+            });
+          }, 500);
+          
+          return () => clearTimeout(fallbackTimer);
         });
       }
     }
@@ -36,7 +46,7 @@ const Loader = () => {
           sessionStorage.setItem('loaderShown', 'true');
         }
       });
-    }, 2500); // Match video duration
+    }, 3000); // Increased duration to ensure video plays on mobile
 
     return () => clearTimeout(timer);
   }, []);
@@ -55,8 +65,11 @@ const Loader = () => {
           disablePictureInPicture
           disableRemotePlayback
           className="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] object-cover"
+          poster="/images/loader-poster.jpg" // Add a poster image as fallback
         >
           <source src="/images/loader.mp4" type="video/mp4" />
+          {/* Fallback content for browsers that don't support video */}
+          <img src="/images/loader-fallback.jpg" alt="Loading" className="w-full h-full object-cover" />
         </video>
         <p className="text-lg sm:text-xl font-semibold">Loading...</p>
       </div>
