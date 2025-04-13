@@ -1,14 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import gsap from 'gsap';
 
 const Loader = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     // Check if loader has been shown before
     if (sessionStorage.getItem('loaderShown')) {
       setIsLoading(false);
       return;
+    }
+
+    // Start video playback programmatically
+    if (videoRef.current) {
+      // Try to play the video immediately
+      const playPromise = videoRef.current.play();
+      
+      // Handle potential play() promise rejection (happens on some mobile browsers)
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.log("Auto-play was prevented. This is normal on some devices.", error);
+        });
+      }
     }
 
     // Animate loader sliding up after delay
@@ -33,9 +47,13 @@ const Loader = () => {
     <div className="fixed inset-0 bg-[#fafafb] z-[9999] flex items-center justify-center loading">
       <div className="flex flex-col items-center px-4">
         <video
+          ref={videoRef}
           autoPlay
           muted
           playsInline
+          preload="auto"
+          disablePictureInPicture
+          disableRemotePlayback
           className="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] object-cover"
         >
           <source src="/images/loader.mp4" type="video/mp4" />

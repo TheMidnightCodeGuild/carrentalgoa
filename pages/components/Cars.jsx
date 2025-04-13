@@ -115,8 +115,8 @@ const Cars = () => {
             options={{
               perPage: 3,
               gap: '1rem',
-              arrows: true,
-              pagination: true,
+              arrows: false,
+              pagination: false,
               breakpoints: {
                 480: {
                   perPage: 1,
