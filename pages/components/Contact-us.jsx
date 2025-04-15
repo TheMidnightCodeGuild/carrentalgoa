@@ -158,8 +158,8 @@ const Contactus = () => {
                       Phone Number
                     </h4>
                     <p className="text-sm sm:text-base text-body-color dark:text-dark-6">
-                      <a href="tel:+919682933407" aria-label="Call our customer service">
-                        (+91) 9682933407
+                      <a href="tel:+918208563913" aria-label="Call our customer service">
+                        (+91) 8208563913
                       </a>
                     </p>
                   </div>
@@ -187,8 +187,8 @@ const Contactus = () => {
                       Email Address
                     </h4>
                     <p className="text-sm sm:text-base text-body-color dark:text-dark-6">
-                      <a href="mailto:rajbaratyadav@gmail.com" aria-label="Email our customer service">
-                        rajbaratyadav@gmail.com
+                      <a href="mailto:carrental@gmail.com" aria-label="Email our customer service">
+                        carrental@gmail.com
                       </a>
                     </p>
                   </div>

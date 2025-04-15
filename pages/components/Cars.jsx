@@ -222,7 +222,7 @@ const Cars = () => {
                       <div className="flex justify-between items-center mt-auto">
                         <div className="flex gap-2">
                           <Link
-                            href="tel:+919876543210"
+                            href="tel:+918208563913"
                             className="bg-blue-600 text-white p-2 sm:p-3 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-blue-300/30 transform hover:-translate-y-1"
                             title="Call us"
                             aria-label="Call to book this car"
@@ -231,7 +231,7 @@ const Cars = () => {
                             <BsTelephoneFill size={18} className="hidden sm:block" />
                           </Link>
                           <Link
-                            href="https://wa.me/919876543210"
+                            href="https://wa.me/918208563913"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-green-600 text-white p-2 sm:p-3 rounded-full hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-green-300/30 transform hover:-translate-y-1"
