@@ -28,7 +28,7 @@ const Landing = () => {
             </p>
             <div className="flex justify-start">
               <Link 
-                href="/components/Contact-us" 
+                href="/components/Our-cars" 
                 className="bg-yellow-500 text-black px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full font-semibold hover:bg-yellow-400 transition duration-300 text-xs sm:text-sm md:text-base"
               >
                 View Our Cars
