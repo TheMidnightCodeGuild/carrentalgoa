@@ -26,6 +26,7 @@ const Cars = () => {
     ertigaManual: 2200,
     tharAuto: 4000,
     tharHardTopAuto: 4000,
+    audiA4: 12000,
   });
   const [loading, setLoading] = useState(true);
 
@@ -138,7 +139,14 @@ const Cars = () => {
       priceKey: "tharHardTopAuto",
       image: "/images/tharhardtop.avif",
       features: ["4 Seater", "Automatic", "4x4"]
+    },
+    {
+      name: "Audi A4",
+      priceKey: "audiA4",
+      image: "/images/audiA4.png",
+      features: ["4 Seater", "Automatic", "Luxury"]
     }
+
   ];
 
   return (
@@ -205,8 +213,8 @@ const Cars = () => {
                         alt={car.name}
                         fill
                         sizes="(max-width: 480px) 90vw, (max-width: 768px) 45vw, (max-width: 1200px) 30vw, 25vw"
-                        style={{ objectFit: "contain" }}
-                        className="p-4"
+                        style={{ objectFit: "cover" }}
+                        className="scale-75"
                       />
                     </div>
                     <div className="p-4 sm:p-6 flex flex-col flex-grow">

@@ -27,6 +27,7 @@ const Ourcars = () => {
     tharAuto: 4000,
     tharHardTopAuto: 4000,
     miniCooper: 20000,
+    audiA4: 12000,
   });
   const [loading, setLoading] = useState(true);
 
@@ -148,6 +149,13 @@ const Ourcars = () => {
       priceKey: "swiftManual",
       features: ["Sporty", "Fuel Efficient", "Easy to Drive"],
     },
+    {
+      name: "Audi A4",
+      image: "/images/audiA4.png",
+      description: "Luxury and style redefined",
+      priceKey: "audiA4",
+      features: ["Luxury", "Automatic", "Premium Interior"],
+    },
   ];
 
   return (
@@ -182,13 +190,13 @@ const Ourcars = () => {
           >
             <ol className="flex text-center justify-center items-center">
               <li>
-                <a
+                <Link
                   className="text-xs sm:text-sm md:text-base text-white hover:text-yellow-400 transition-colors"
                   href="/"
                   aria-label="Home"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <span className="mx-2 sm:mx-3 text-white">/</span>
@@ -226,7 +234,7 @@ const Ourcars = () => {
                       src={car.image}
                       alt={car.name}
                       fill
-                      className="object-contain"
+                      className="object-cover scale-75"
                     />
                     <div className="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1.5 rounded-full text-sm font-bold shadow-lg">
                       ₹{carPrices[car.priceKey]}/day
