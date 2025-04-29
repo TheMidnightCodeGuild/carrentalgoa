@@ -159,7 +159,7 @@ const Contactus = () => {
                     </h4>
                     <p className="text-sm sm:text-base text-body-color dark:text-dark-6">
                       <a href="tel:+918208563913" aria-label="Call our customer service">
-                        (+91) 8208563913
+                        (+91) 8149563913
                       </a>
                     </p>
                   </div>
@@ -188,7 +188,7 @@ const Contactus = () => {
                     </h4>
                     <p className="text-sm sm:text-base text-body-color dark:text-dark-6">
                       <a href="mailto:carrental@gmail.com" aria-label="Email our customer service">
-                        carrental@gmail.com
+                      priteshmkr@gmail.com
                       </a>
                     </p>
                   </div>
