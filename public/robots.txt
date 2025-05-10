@@ -1,9 +1,8 @@
-# *
 User-agent: *
 Allow: /
 
-# Host
-Host: https://bestcarrentalgoa.com
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
 
-# Sitemaps
 Sitemap: https://bestcarrentalgoa.com/sitemap.xml
