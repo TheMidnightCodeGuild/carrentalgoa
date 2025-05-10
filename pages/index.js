@@ -19,7 +19,7 @@ const Index = () => {
         />
         <meta
           name="keywords"
-          content="car rental, Goa, vehicle hire, premium cars, self-drive, chauffeur service, beach travel, Goa tourism"
+          content=" car rental goa, best car rental in goa, car rental, Goa, vehicle hire, premium cars, self-drive, chauffeur service, beach travel, Goa tourism"
         />
         <meta
           property="og:title"
