@@ -17,7 +17,7 @@ const Blogs = () => {
     },
     {
       title: "Car Rental Tips for First-Time Visitors",
-      heading: "Goa Travel Guide",
+      heading: "Goa Travel Guide", 
       excerpt:
         "Essential advice for tourists renting a car in Goa for the first time...",
       image: "/images/blog2.jpg",
@@ -70,7 +70,7 @@ const Blogs = () => {
       <Navbar />
 
       {/* Hero Banner */}
-      <div
+      <header
         className="bg-cover min-h-[300px] lg:min-h-[550px] mt-10 lg:mt-0 flex items-center bg-center object-cover justify-center bg-black flex-col relative w-full"
         style={{
           backgroundImage: "url('/images/landingbg.png')",
@@ -113,27 +113,27 @@ const Blogs = () => {
             </ol>
           </nav>
         </div>
-      </div>
+      </header>
 
       {/* Blog Posts Grid */}
-      <div className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <div
+              <article
                 key={index}
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100"
               >
-                <div className="relative h-48">
+                <figure className="relative h-48">
                   <Image
                     src={post.image}
                     alt={post.title}
                     fill
                     className="object-cover"
                   />
-                </div>
+                </figure>
                 <div className="p-6">
-                  <p className="text-sm text-gray-500 mb-2">{post.date}</p>
+                  <time className="text-sm text-gray-500 mb-2">{post.date}</time>
                   <h2 className="text-2xl font-bold text-gray-800 mb-2">
                     {post.heading}
                   </h2>
@@ -148,11 +148,11 @@ const Blogs = () => {
                     Read More →
                   </Link>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
 
       <Footer />
     </>

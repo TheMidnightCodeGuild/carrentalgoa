@@ -33,30 +33,31 @@ const Navbar = () => {
   }, [mobileMenuOpen]);
 
   return (
-    <nav className="fixed top-0 w-full z-50">
-      <div className="bg-[#FFBF00] py-2 border-4 border-white">
+    <header className="fixed top-0 w-full z-50">
+      <nav className="bg-[#FFBF00] py-2 border-4 border-white" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center" aria-label="Home">
               <Image
                 src="/images/logo.png"
-                alt="Car Rental Service"
+                alt="Best Car Rental Service in Goa"
                 width={130}
                 height={40}
                 className="h-12 w-auto sm:h-24"
                 priority
               />
             </Link>
-            <h2 className="text-yellow-900 hover:text-white px-3 py-2 text-lg md:text-4xl font-bold relative group transition-colors duration-300 tracking-wide">
+            <h1 className="text-yellow-900 hover:text-white px-3 py-2 text-lg md:text-4xl font-bold relative group transition-colors duration-300 tracking-wide">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-800 to-yellow-950">Best Car Rental Goa</span>
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-yellow-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-            </h2>
+            </h1>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Desktop menu">
               <Link
                 href="/"
                 className="text-yellow-900 hover:text-white px-3 py-2 text-sm font-semibold relative group"
+                aria-label="Home page"
               >
                 Home
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
@@ -65,6 +66,7 @@ const Navbar = () => {
               <Link
                 href="/components/About-us"
                 className="text-yellow-900 hover:text-white px-3 py-2 text-sm font-semibold relative group"
+                aria-label="About us page"
               >
                 About Us
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
@@ -73,6 +75,7 @@ const Navbar = () => {
               <Link
                 href="/components/Our-cars"
                 className="text-yellow-900 hover:text-white px-3 py-2 text-sm font-semibold relative group"
+                aria-label="Our cars page"
               >
                 Our Cars
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
@@ -80,6 +83,7 @@ const Navbar = () => {
               <Link
                 href="/components/Blogs"
                 className="text-yellow-900 hover:text-white px-3 py-2 text-sm font-semibold relative group"
+                aria-label="Blog posts"
               >
                 Blogs
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
@@ -88,6 +92,7 @@ const Navbar = () => {
               <Link
                 href="/components/Contact-us"
                 className="bg-white border text-yellow-900 hover:bg-yellow-50 px-4 py-2 rounded-lg text-sm font-semibold transition duration-150 ease-in-out shadow-sm hover:shadow-md"
+                aria-label="Contact us page"
               >
                 Contact Us
               </Link>
@@ -98,6 +103,9 @@ const Navbar = () => {
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="inline-flex items-center justify-center p-2 rounded-md text-yellow-900 hover:bg-yellow-100"
+                aria-expanded={mobileMenuOpen}
+                aria-controls="mobile-menu"
+                aria-label="Toggle mobile menu"
               >
                 <span className="sr-only">Open main menu</span>
                 {mobileMenuOpen ? (
@@ -106,6 +114,7 @@ const Navbar = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -120,6 +129,7 @@ const Navbar = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -136,15 +146,18 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         <div
+          id="mobile-menu"
           ref={mobileNavRef}
           className="fixed inset-0 md:hidden bg-yellow-50 z-50 transform translate-x-full transition-transform duration-300 ease-in-out"
+          role="navigation"
+          aria-label="Mobile menu"
         >
           <div className="pt-5 pb-6 px-4">
             <div className="flex items-center justify-between mb-6">
-              <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/" onClick={() => setMobileMenuOpen(false)} aria-label="Home">
                 <Image
                   src="/images/logo.png"
-                  alt="Car Rental Service"
+                  alt="Best Car Rental Service in Goa"
                   width={120}
                   height={35}
                   className="h-8 w-auto"
@@ -154,12 +167,14 @@ const Navbar = () => {
               <button
                 onClick={() => setMobileMenuOpen(false)}
                 className="rounded-md p-2 text-yellow-900 hover:bg-yellow-100"
+                aria-label="Close mobile menu"
               >
                 <svg
                   className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -170,11 +185,12 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
-            <div className="space-y-3">
+            <nav className="space-y-3">
               <Link
                 href="/"
                 className="block px-4 py-3 text-base font-medium text-yellow-900 hover:bg-yellow-100 rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
+                aria-label="Home page"
               >
                 Home
               </Link>
@@ -182,6 +198,7 @@ const Navbar = () => {
                 href="/components/About-us"
                 className="block px-4 py-3 text-base font-medium text-yellow-900 hover:bg-yellow-100 rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
+                aria-label="About us page"
               >
                 About Us
               </Link>
@@ -189,6 +206,7 @@ const Navbar = () => {
                 href="/components/Our-cars"
                 className="block px-4 py-3 text-base font-medium text-yellow-900 hover:bg-yellow-100 rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
+                aria-label="Our cars page"
               >
                 Our Cars
               </Link>
@@ -196,14 +214,15 @@ const Navbar = () => {
                 href="/components/Contact-us"
                 className="block px-4 py-3 text-base font-medium text-yellow-900 hover:bg-yellow-100 rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
+                aria-label="Contact us page"
               >
                 Contact Us
               </Link>
-            </div>
+            </nav>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
