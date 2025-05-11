@@ -189,7 +189,7 @@ const Ourcars = () => {
           <div className="absolute inset-0 bg-black/50 backdrop-filter backdrop-blur-[2px]"></div>
           <div className="lg:mt-10 flex items-center justify-center flex-col w-full mt-10 relative z-10 px-4 animate-fadeIn">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl text-white mx-auto font-bold tracking-wider text-center drop-shadow-lg">
-              Our <span className="text-yellow-400">Premium</span> Fleet
+              Our <strong className="text-yellow-400">Premium</strong> Fleet
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-white text-center mt-4 max-w-2xl font-light">
               Experience luxury and comfort with our diverse range of vehicles
@@ -228,9 +228,9 @@ const Ourcars = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {loading ? (
               <div className="flex justify-center items-center h-64">
-                <div className="text-xl text-gray-600">
+                <h1 className="text-xl text-gray-600">
                   Loading our premium fleet...
-                </div>
+                </h1>
               </div>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
