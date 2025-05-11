@@ -12,22 +12,22 @@ const Index = () => {
   return (
     <div>
       <Head>
-        <title>Goa Car Rentals | Cheapest Car Rental Services in Goa</title>
+        <title>Best Car Rental in Goa | Most Affordable Car Hire Services Goa</title>
         <meta
           name="description"
-          content="Explore Goa with our premium car rental services. Wide selection of vehicles with competitive rates and exceptional service for your perfect Goa adventure."
+          content="Best car rental service in Goa offering luxury & budget cars. Top-rated car hire in North & South Goa. Book self-drive cars & chauffeur services at lowest prices."
         />
         <meta
           name="keywords"
-          content=" car rental goa, best car rental in goa, car rental, Goa, vehicle hire, premium cars, self-drive, chauffeur service, beach travel, Goa tourism"
+          content="best car rental goa, cheap car rental goa, car hire goa, goa car rental service, car rental north goa, car rental south goa, luxury car rental goa, budget car rental goa, self drive car rental goa, car lease goa, airport car rental goa, monthly car rental goa, car rental packages goa"
         />
         <meta
           property="og:title"
-          content="Goa Car Rentals | Premium Car Rental Services"
+          content="Best Car Rental in Goa | Top-Rated Vehicle Hire Services"
         />
         <meta
           property="og:description"
-          content="Your premier destination for car rentals in Goa. Explore beaches and hidden gems with our reliable vehicles and exceptional service."
+          content="Leading car rental service in Goa offering wide range of vehicles. Best prices guaranteed for self-drive cars and chauffeur services across Goa."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.bestcarrentalgoa.com" />
