@@ -11,7 +11,7 @@ const Choose = () => {
             Why Choose <span className="text-yellow-500">Us?</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-            Experience the best car rental service in Goa with our premium fleet and exceptional customer service.
+            Experience the <strong>best car rental service in Goa</strong> with our premium fleet and exceptional customer service.
           </p>
         </header>
 
