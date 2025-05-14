@@ -1,12 +1,23 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+
+import Head from 'next/head';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 
 const Blog3 = () => {
   return (
     <>
+      <Head>
+        <title>Luxury vs Economy Car Rentals in Goa - Compare & Choose | GoCars</title>
+        <meta name="description" content="Compare luxury and economy car rentals in Goa. Learn about pros and cons, features, and costs to make the best choice for your Goa adventure. Expert guide by GoCars." />
+        <meta name="keywords" content="luxury car rental Goa, economy car rental Goa, car rental comparison, Goa car hire, budget vs premium cars" />
+        <meta property="og:title" content="Luxury vs Economy Car Rentals in Goa - Compare & Choose | GoCars" />
+        <meta property="og:description" content="Compare luxury and economy car rentals in Goa. Learn about pros and cons, features, and costs to make the best choice for your Goa adventure." />
+        <meta property="og:image" content="/images/blog3.webp" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       <Navbar />
       <div className="w-full max-w-[1300px] mx-auto py-8 sm:py-12 px-4 sm:px-6 mt-20">
         <article className="p-4 sm:p-6 bg-white rounded-lg sm:rounded-xl shadow-md sm:shadow-lg hover:shadow-xl transition-shadow duration-300">

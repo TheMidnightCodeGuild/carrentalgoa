@@ -1,11 +1,22 @@
 import React from 'react';
 import Image from 'next/image';
+import Head from 'next/head';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 
 const Blog5 = () => {
   return (
     <>
+      <Head>
+        <title>Monsoon Driving Safety in Goa | Essential Tips for Rainy Season</title>
+        <meta name="description" content="Learn essential safety tips for driving rental cars during Goa's monsoon season. Get expert advice on handling road conditions, visibility challenges, and flooded streets." />
+        <meta name="keywords" content="monsoon driving, Goa safety tips, rainy season driving, rental car safety, flood safety, road conditions Goa" />
+        <meta property="og:title" content="Monsoon Driving Safety in Goa | Essential Tips for Rainy Season" />
+        <meta property="og:description" content="Learn essential safety tips for driving rental cars during Goa's monsoon season. Get expert advice on handling road conditions, visibility challenges, and flooded streets." />
+        <meta property="og:image" content="/images/blog5.jpg" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       <Navbar />
       <div className="w-full max-w-[1300px] mx-auto py-8 sm:py-12 px-4 sm:px-6 mt-20">
         <article className="p-4 sm:p-6 bg-white rounded-lg sm:rounded-xl shadow-md sm:shadow-lg hover:shadow-xl transition-shadow duration-300">

@@ -2,10 +2,21 @@ import React from 'react';
 import Image from 'next/image';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import Head from 'next/head';
 
 const Blog1 = () => {
   return (
     <>
+      <Head>
+        <title>Best Scenic Drives in Goa | Car Rental Road Trip Guide</title>
+        <meta name="description" content="Discover the most breathtaking coastal and mountain roads for your Goa road trip. From Western Ghats to coastal highways, explore hidden viewpoints and charming villages." />
+        <meta name="keywords" content="scenic drives goa, goa road trips, coastal drives goa, western ghats drive, goa driving routes, car rental goa" />
+        <meta property="og:title" content="Best Scenic Drives in Goa | Car Rental Road Trip Guide" />
+        <meta property="og:description" content="Discover the most breathtaking coastal and mountain roads for your Goa road trip. From Western Ghats to coastal highways, explore hidden viewpoints and charming villages." />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="/images/blog1.jpg" />
+        <link rel="canonical" href="https://www.bestcarrentalgoa.com/components/Blogs/Blog1" />
+      </Head>
       <Navbar />
       <div className="w-full max-w-[1300px] mx-auto py-8 sm:py-12 px-4 sm:px-6 mt-20">
         <article className="p-4 sm:p-6 bg-white rounded-lg sm:rounded-xl shadow-md sm:shadow-lg hover:shadow-xl transition-shadow duration-300">

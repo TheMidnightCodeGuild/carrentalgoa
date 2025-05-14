@@ -2,10 +2,21 @@ import React from 'react';
 import Image from 'next/image';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import Head from 'next/head';
 
 const Blog6 = () => {
   return (
     <>
+      <Head>
+        <title>Best Weekend Road Trips from Goa | Car Rental Travel Guide</title>
+        <meta name="description" content="Plan amazing weekend getaways from Goa by car. Discover nearby destinations in Karnataka and Maharashtra, complete with driving routes, times, and attraction guides." />
+        <meta name="keywords" content="weekend trips from goa, goa road trips, karnataka maharashtra drives, car rental goa, weekend getaways, driving routes goa" />
+        <meta property="og:title" content="Best Weekend Road Trips from Goa | Car Rental Travel Guide" />
+        <meta property="og:description" content="Plan amazing weekend getaways from Goa by car. Discover nearby destinations in Karnataka and Maharashtra, complete with driving routes, times, and attraction guides." />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="/images/blog6.jpg" />
+        <link rel="canonical" href="https://www.bestcarrentalgoa.com/components/Blogs/Blog6" />
+      </Head>
       <Navbar />
       <div className="w-full max-w-[1300px] mx-auto py-8 sm:py-12 px-4 sm:px-6 mt-20">
         <article className="p-4 sm:p-6 bg-white rounded-lg sm:rounded-xl shadow-md sm:shadow-lg hover:shadow-xl transition-shadow duration-300">

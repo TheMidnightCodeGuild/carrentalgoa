@@ -2,10 +2,21 @@ import React from 'react';
 import Image from 'next/image';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import Head from 'next/head';
 
 const Blog4 = () => {
   return (
     <>
+      <Head>
+        <title>Hidden Beaches in Goa Accessible by Car | Best Car Rental Goa</title>
+        <meta name="description" content="Discover secret beaches and hidden coves in Goa accessible by car. Get directions, parking info, and insider tips to find pristine beaches away from tourist crowds." />
+        <meta name="keywords" content="hidden beaches goa, secret beaches, goa hidden coves, offbeat goa beaches, goa car rental beaches, beach parking goa" />
+        <meta property="og:title" content="Hidden Beaches in Goa Accessible by Car | Best Car Rental Goa" />
+        <meta property="og:description" content="Discover secret beaches and hidden coves in Goa accessible by car. Get directions, parking info, and insider tips to find pristine beaches away from tourist crowds." />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="/images/blog4.png" />
+        <link rel="canonical" href="https://www.bestcarrentalgoa.com/components/Blogs/Blog4" />
+      </Head>
       <Navbar />
       <div className="w-full max-w-[1300px] mx-auto py-8 sm:py-12 px-4 sm:px-6 mt-20">
         <article className="p-4 sm:p-6 bg-white rounded-lg sm:rounded-xl shadow-md sm:shadow-lg hover:shadow-xl transition-shadow duration-300">

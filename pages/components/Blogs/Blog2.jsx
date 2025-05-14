@@ -1,12 +1,23 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import Head from 'next/head';
 
 const Blog2 = () => {
   return (
     <>
+      <Head>
+        <title>Essential Car Rental Tips for First-Time Visitors to Goa | Best Car Rental Goa</title>
+        <meta name="description" content="Get expert tips for renting a car in Goa. Learn about documentation requirements, driving rules, local traffic patterns, and insider advice for a smooth rental experience." />
+        <meta name="keywords" content="car rental tips goa, goa driving rules, rent car goa, first time car rental, goa traffic guide, goa parking spots" />
+        <meta property="og:title" content="Essential Car Rental Tips for First-Time Visitors to Goa | Best Car Rental Goa" />
+        <meta property="og:description" content="Get expert tips for renting a car in Goa. Learn about documentation requirements, driving rules, local traffic patterns, and insider advice for a smooth rental experience." />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="/images/blog2.jpg" />
+        <link rel="canonical" href="https://www.bestcarrentalgoa.com/components/Blogs/Blog2" />
+      </Head>
       <Navbar />
       <div className="w-full max-w-[1300px] mx-auto py-8 sm:py-12 px-4 sm:px-6 mt-20">
         <article className="p-4 sm:p-6 bg-white rounded-lg sm:rounded-xl shadow-md sm:shadow-lg hover:shadow-xl transition-shadow duration-300">
